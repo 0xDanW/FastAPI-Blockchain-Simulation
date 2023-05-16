@@ -48,12 +48,6 @@ def _to_digest(
     to_digest = str(new_proof ** 2 - previous_proof ** 2 + index) + data
     # It returns an utf-8 encoded version of the string
     return to_digest.encode()
-def _to_digest(
-    self, new_proof: int, previous_proof: int, index: int, data: str
-) -> bytes:
-    to_digest = str(new_proof ** 2 - previous_proof ** 2 + index) + data
-    # It returns an utf-8 encoded version of the string
-    return to_digest.encode()
 
 def _proof_of_work(self, previous_proof: str, index: int, data: str) -> int:
     new_proof = 1
